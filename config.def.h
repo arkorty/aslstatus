@@ -7,7 +7,7 @@
 /* for usleep */
 #define _SEC *1000
 #define _MIN *(60 _SEC)
-#define _HR  *(60 _MIN)
+#define _HR *(60 _MIN)
 
 /* interval to run only once */
 #define ONCE ((unsigned int)-1)
@@ -28,10 +28,10 @@ static const char unknown_str[] = "n/a";
 /* clang-format off */
 static struct arg_t args[] = {
 
-/* function		format		argument	interval (in ms) */
+/* function       format                        argument                interval (in ms) */
 
 #if USE_X
-/* { bspwm_ws,		" [ %s ]%%{r}",	NULL,		0,	END }, */
+/* { bspwm_ws,    " [ %s ]%%{r}",               NULL,                   0,          END }, */
 #endif
 { cpu_perc,       "^fg(78a9ff)cpu: %s%%",       NULL,                   1 _SEC,     END },
 { cpu_freq,       " %sHz",                      NULL,                   1 _SEC,     END },
