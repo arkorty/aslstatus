@@ -22,7 +22,8 @@ static const char unknown_str[] = "n/a";
  * then change `BUFF_SZ` in lib/util.h
  */
 
-#define IFC "wlan0" /* wifi interface */
+#define IFC "wlp0s20f3" /* wifi interface */
+#define BATTERY "CMB0"
 
 /* clang-format off */
 static struct arg_t args[] = {

@@ -57,6 +57,7 @@ typedef uint8_t percent_t;
 /* buffer printf */
 void bprintf(char *, const char *, ...);
 
+void fmt_human_si(char *, uintmax_t);
 void fmt_human(char *, uintmax_t);
 
 /*

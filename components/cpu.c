@@ -54,7 +54,7 @@ cpu_freq(char		      *out,
 	/* in kHz */
 	if (!esscanf(1, buf, "%ju", &freq)) ERRRET(out);
 
-	fmt_human(out, freq * 1000);
+	fmt_human_si(out, freq * 1000);
 }
 
 void

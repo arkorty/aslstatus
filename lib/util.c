@@ -43,6 +43,31 @@ bprintf(char *buf, const char *fmt, ...)
 }
 
 void
+fmt_human_si(char *out, uintmax_t num)
+{
+	uint8_t	    i;
+	double	    scaled;
+	const char *prefix[] =
+	{ "",
+	  "k",
+	  "M",
+	  "G",
+	  "T",
+	  "P",
+	  "E",
+	  "Z",
+	  "Y" }
+	;
+
+	SAFE_ASSIGN(scaled, num);
+
+	for (i = 0; i < LEN(prefix) && scaled >= NUMFMT_SI; i++)
+		scaled /= NUMFMT_SI;
+
+	bprintf(out, "%.1f %s", scaled, prefix[i]);
+}
+
+void
 fmt_human(char *out, uintmax_t num)
 {
 	uint8_t	    i;
