@@ -5,3 +5,5 @@ components/.*.c
 
 smart-config/smart-config
 smart-config/components.c
+
+config.h
