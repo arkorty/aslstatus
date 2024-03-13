@@ -33,17 +33,22 @@ static struct arg_t args[] = {
 #if USE_X
 /* { bspwm_ws,		" [ %s ]%%{r}",	NULL,		0,	END }, */
 #endif
-{ disk_perc,		" [# %s%%",	"/",		25 _SEC,	END },
-{ disk_free,		" %s]",		"/",		25 _SEC,	END },
-{ cpu_perc,		"-[ %3s%%]",	NULL,		 1 _SEC,	END },
-{ load_avg,		"-[%s]",	NULL,		 3 _SEC,	END },
-{ ram_used,		"-[﬙ %s]", 	NULL,		 3 _SEC,	END },
-{ vol_perc,		"-[%s]",	NULL,		 0,		END },
-{ wifi_essid,		"-[直 \"%s\"",	IFC,		 2 _SEC,	END },
-{ wifi_perc,		" %3s%%]",	IFC,		 2 _SEC,	END },
-{ battery_state,	"-[%s",		"BAT0",		 2 _SEC,	END },
-{ battery_perc,		" %3s%%]",	"BAT0",		 1 _MIN,	END },
-{ datetime,		"-[ %s]",	"%H:%M:%S",	 1 _SEC,	END },
+{ cpu_perc,       "^fg(78a9ff)cpu: %s%%",       NULL,                   1 _SEC,     END },
+{ cpu_freq,       " %sHz",                      NULL,                   1 _SEC,     END },
+{ ram_used,       " ^fg(f16da6)mem: %sB/",      NULL,                   1 _SEC,     END },
+{ ram_total,      "%sB",                        NULL,                   1 _SEC,     END },
+{ disk_used,      " ^fg(25be6a)root: %sB/",     "/",                    30 _SEC,    END },
+{ disk_total,     "%sB",                        "/",                    30 _SEC,    END },
+{ disk_used,      " ^fg(2dc7c4)home: %sB/",     "/home/ark",            30 _SEC,    END },
+{ disk_total,     "%sB",                        "/home/ark",            30 _SEC,    END },
+//{ battery_perc,   " ^fg(ee5396)bat: %s%%",      BATTERY,                15 _SEC,    END },
+//{ battery_state,  " %s",                        BATTERY,                15 _SEC,    END },
+//{ run_command,    " ^fg(25be6a)bri: %s%%",      "xbacklight -get",      1 _SEC,     END },
+{ ipv4,           " ^fg(78a9ff)net: %s",        "enp7s0",               3 _SEC,     END },
+{ vol_perc,       " ^fg(25be6a)vol: %s",        NULL,                   0,          END },
+//{ wifi_perc,      " ^fg(78a9ff)wifi: %s%%",      IFC,                   5 _SEC,     END },
+//{ wifi_essid,     " (%s)",                       IFC,                   5 _SEC,     END },
+{ datetime,       " ^fg(e4e4e5)dat: %s",         "%a %d-%m-%y %H:%M",   1 _SEC,     END },
 #if USE_X && USE_XKB
 { keymap,		"-[ %s] ",	NULL,		 0,	END },
 #endif
