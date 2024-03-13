@@ -94,6 +94,9 @@ aslstatus.o: CPPFLAGS += $(NEED_X_SERVER)
 config.o: config.h
 	arch="$$(uname -m)" && $(LD) -m "elf_$${arch}" -r -b binary -o $@ $<
 
+config.h: config.def.h
+	cp config.def.h $@
+
 %.o: %.c
 	$(CC) -o $@ -c $< ${CFLAGS} ${WARNINGS} ${CPPFLAGS}
 
