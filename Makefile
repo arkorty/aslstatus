@@ -14,8 +14,8 @@ endif # COMPONENTS
 
 OBJ = ${COMPONENTS:.c=.o}
 
-X     ?= 1
-XKB   ?= 1
+X     ?= 0
+XKB   ?= 0
 AUDIO ?= PULSE
 
 # components that needs running X server
