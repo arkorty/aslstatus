@@ -33,24 +33,21 @@ static struct arg_t args[] = {
 #if USE_X
 /* { bspwm_ws,    " [ %s ]%%{r}",               NULL,                   0,          END }, */
 #endif
-{ cpu_perc,       "^fg(78a9ff)cpu: %s%%",       NULL,                   1 _SEC,     END },
+{ cpu_perc,       "^fg(f4005f)cpu: %s%%",       NULL,                   1 _SEC,     END },
 { cpu_freq,       " %sHz",                      NULL,                   1 _SEC,     END },
-{ ram_used,       " ^fg(f16da6)mem: %sB/",      NULL,                   1 _SEC,     END },
-{ ram_total,      "%sB",                        NULL,                   1 _SEC,     END },
-//{ disk_used,      " ^fg(25be6a)root: %sB/",     "/",                    30 _SEC,    END },
-//{ disk_total,     "%sB",                        "/",                    30 _SEC,    END },
-{ disk_used,      " ^fg(2dc7c4)home: %sB/",     "/home",            30 _SEC,    END },
-{ disk_total,     "%sB",                        "/home",            30 _SEC,    END },
-{ battery_perc,   " ^fg(ee5396)bat: %s%%",      BATTERY,                10 _SEC,    END },
+{ ram_perc,       " ^fg(98e024)mem: %s%%",      NULL,                   1 _SEC,     END },
+{ disk_perc,      " ^fg(e0d561)root: %s%%",     "/",                    30 _SEC,    END },
+{ disk_perc,      " ^fg(9d65ff)home: %s%%",     "/home",                30 _SEC,    END },
+{ battery_perc,   " ^fg(f4005f)bat: %s%%",      BATTERY,                10 _SEC,    END },
 { battery_state,  " %s",                        BATTERY,                10 _SEC,    END },
-{ run_command,    " ^fg(25be6a)bri: %s%%",      "xbacklight -get",      1 _SEC,     END },
-//{ ipv4,           " ^fg(78a9ff)net: %s",        "enp7s0",               3 _SEC,     END },
-{ vol_perc,       " ^fg(25be6a)vol: %s",        NULL,                  1,           END },
-{ wifi_perc,      " ^fg(78a9ff)wifi: %s%%",     IFC,                   5 _SEC,      END },
-{ wifi_essid,     " (%s)",                      IFC,                   5 _SEC,      END },
-{ datetime,       " ^fg(e4e4e5)dat: %s",        "%a %d-%m-%y %H:%M",   1 _SEC,      END },
+{ run_command,    " ^fg(58d1eb)light: %s%%",    "xbacklight -get",      1 _SEC,     END },
+{ ipv4,           " ^fg(f6f6ef)net: %s",        "enp7s0",               3 _SEC,     END },
+{ vol_perc,       " ^fg(98e024)vol: %s",        NULL,                   1,          END },
+{ wifi_perc,      " ^fg(e0d561)wifi: %s%%",     IFC,                    5 _SEC,     END },
+{ wifi_essid,     " (%s)",                      IFC,                    5 _SEC,     END },
+{ datetime,       " ^fg(9d65ff)dat: %s",        "%d-%m-%y %H:%M",    1 _SEC,     END },
 #if USE_X && USE_XKB
-{ keymap,		"-[ %s] ",	NULL,		 0,	END },
+{ keymap,       "-[ %s] ", NULL,        0, END },
 #endif
 
 };
